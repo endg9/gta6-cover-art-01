@@ -1,0 +1,55 @@
+/* Vice City Cover Maker — editor chrome. Dark, compact, desktop-first. */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: #14101c;
+  color: #f2eef7;
+}
+.topbar { padding: 14px 20px 10px; border-bottom: 1px solid #2c2340; }
+.topbar h1 { margin: 0; font-size: 22px; letter-spacing: 0.5px; }
+.tagline { margin: 4px 0 0; color: #b9aed0; font-size: 13px; }
+.editor { display: flex; gap: 16px; padding: 16px 20px 24px; align-items: flex-start; }
+.sidebar { width: 300px; flex: 0 0 300px; display: flex; flex-direction: column; gap: 14px; }
+.sidebar section {
+  background: #1d1729; border: 1px solid #2c2340; border-radius: 10px;
+  padding: 12px 14px;
+}
+.sidebar h2 { margin: 0 0 10px; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #e8b64c; }
+.row { display: flex; gap: 8px; align-items: center; }
+.row.wrap { flex-wrap: wrap; }
+.btn {
+  background: #2c2340; color: #f2eef7; border: 1px solid #4a3a6b;
+  border-radius: 8px; padding: 8px 12px; font-size: 13px; cursor: pointer;
+}
+.btn:hover { background: #3a2d55; }
+.btn.primary { background: #e8537a; border-color: #e8537a; color: #fff; font-weight: 600; }
+.btn.primary:hover { background: #f06a8d; }
+.seg { display: flex; gap: 6px; flex-wrap: wrap; }
+.seg.col { flex-direction: column; }
+.seg button {
+  background: #241d33; color: #d9d0e8; border: 1px solid #3a2d55;
+  border-radius: 7px; padding: 7px 10px; font-size: 13px; cursor: pointer; text-align: left;
+}
+.seg button.active { background: #e8537a; border-color: #e8537a; color: #fff; font-weight: 600; }
+.field { display: flex; flex-direction: column; gap: 5px; font-size: 13px; margin-bottom: 10px; }
+.field input[type="text"] {
+  background: #14101c; color: #f2eef7; border: 1px solid #4a3a6b;
+  border-radius: 7px; padding: 8px 10px; font-size: 14px;
+}
+.field input[type="range"] { width: 100%; accent-color: #e8537a; }
+.check { display: flex; gap: 8px; align-items: center; font-size: 13px; margin-bottom: 8px; cursor: pointer; }
+.check input { accent-color: #e8537a; }
+.hint { font-size: 12px; color: #9d92b5; margin: 8px 0 0; line-height: 1.45; }
+.photo-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.photo-list img {
+  width: 64px; height: 64px; object-fit: cover; border-radius: 6px;
+  border: 2px solid #3a2d55; cursor: pointer;
+}
+.photo-list img.used { border-color: #e8b64c; }
+.preview-wrap { flex: 1; min-width: 0; }
+#preview {
+  width: 100%; height: auto; display: block; background: #000;
+  border: 1px solid #2c2340; border-radius: 10px; cursor: crosshair;
+}
+.status { font-size: 12px; color: #9d92b5; margin: 8px 0 0; }
